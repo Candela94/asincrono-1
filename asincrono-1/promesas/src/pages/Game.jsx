@@ -26,7 +26,7 @@ const Monsters = () => {
 
             {
                monster.map((monsters,id) => (
-                <CardMonster key={id} monster ={monsters} monsterDetail={monsterDetails} />
+                <CardMonster key={id} monster ={monsters}/>
                ))
             }
         </div>
