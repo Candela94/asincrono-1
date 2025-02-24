@@ -1,0 +1,17 @@
+
+
+.Card{
+     width: 350px;
+    box-shadow: 1px 1px 10px rgb(189, 188, 188);
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border-radius: 6px;
+    gap: 2rem;
+
+}
+
+
+.Card-img{
+    border-radius: 6px;
+}
