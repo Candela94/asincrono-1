@@ -21,9 +21,18 @@ export const UserContextProvider = ({children}) => {
 
     const userData = async () => {
 
+        let controller = new AbortController()
+        let options = {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          signal: controller.signal
+        }
+
 
         try{
-            const response = await fetch('https://randomuser.me/api/?results=30');
+            const response = await fetch('https://randomuser.me/api/?results=30',options);
 
             const jsonData = await response.json();
 

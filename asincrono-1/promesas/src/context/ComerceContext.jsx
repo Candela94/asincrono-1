@@ -19,8 +19,18 @@ export const ComerceContextProvider = ({children}) => {
  
     const obtenerData = async() => {
 
+        let controller = new AbortController()
+        let options = {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          signal: controller.signal
+        }
+    
+
         try {
-            const response = await fetch('https://fakestoreapi.com/products')
+            const response = await fetch('https://fakestoreapi.com/products', options)
 
             const data = await response.json();
 
